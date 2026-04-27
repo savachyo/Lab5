@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій сучасний сайт - Темна тема</title>
+    <style>
+        /* Підключення кастомного шрифту Moniqa Black */
+        @font-face {
+            font-family: 'Moniqa Black';
+            src: url('Moniqa-Black.woff2') format('woff2'),
+                 url('Moniqa-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        /* Базові налаштування: ЧОРНИЙ ФОН та БІЛИЙ ТЕКСТ */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff; /* Був #111 (чорний), став білий */
+            background-color: #000000; /* Базовий чорний фон */
+        }
+
+        /* Застосування Moniqa Black до заголовків */
+        h1, h2 {
+            font-family: 'Moniqa Black', 'Impact', sans-serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        /* --- ШАПКА САЙТУ (Header) --- */
+        header {
+            background: linear-gradient(90deg, #000000 0%, #b30021 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0 0 20px 0;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: opacity 0.3s ease;
+        }
+
+        header nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* --- ЗАГАЛЬНІ СТИЛІ ДЛЯ СЕКЦІЙ --- */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* ТЕМНІ ФОНИ ЗАМІСТЬ СВІТЛИХ */
+        .bg-light {
+            background-color: #0f0f0f; /* Дуже темний сірий замість світло-сірого */
+        }
+
+        .bg-white {
+            background-color: #1a1a1a; /* Трохи світліший чорний замість білого */
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* --- СЕКЦІЯ 1: Типографіка --- */
+        .typography p {
+            font-size: 16px;
+            margin: 0;
+            color: #e0e0e0; /* Злегка приглушений білий для тексту, щоб не різав очі */
+        }
+
+        /* --- СЕКЦІЯ 2 & 3: Сітка для іконок --- */
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+        }
+
+        .feature-item span {
+            margin-top: 15px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* Стилі для іконок верхнього ряду */
+        .header-color-icon svg {
+            width: 60px;
+            height: 60px;
+            fill: #b30021;
+        }
+
+        /* Стилі для великих іконок нижнього ряду */
+        .header-color-icon-large svg {
+            width: 100px;
+            height: 100px;
+            fill: #b30021;
+            /* Тінь на чорному фоні виглядає як неонове світіння */
+            filter: drop-shadow(0 0 15px rgba(179, 0, 33, 0.4));
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Мій сучасний сайт</h1>
+    <nav>
+        <a href="#">Головна</a>
+        <a href="#">Таблицi Команд</a>
+        <a href="#">Кiберспорт Команди</a>
+    </nav>
+</header>
+
+<section class="typography bg-light">
+    <h2>Веб-типографіка</h2>
+    <p>На цьому сайті використано шрифт Moniqa Black та Google Fonts, іконкові шрифти та SVG-графіку з пiдсвiчуванням.</p>
+</section>
+
+<section class="capabilities bg-white">
+    <h2>Можливості Геймiнгу</h2>
+
+    <div class="features-grid">
+        <div class="feature-item header-color-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 6 18.5 6s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+            <span>Ігри</span>
+        </div>
+
+        <div class="feature-item header-color-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+            </svg>
+            <span>Стрімінг</span>
+        </div>
+
+        <div class="feature-item header-color-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+            </svg>
+            <span>Кіберспорт</span>
+        </div>
+    </div>
+</section>
+
+<section class="svg-elements bg-light">
+    <h2>SVG елементи</h2>
+
+    <div class="features-grid">
+        <div class="feature-item header-color-icon-large">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+            </svg>
+            <span>Продуктивність</span>
+        </div>
+
+        <div class="feature-item header-color-icon-large">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+            <span>Команда</span>
+        </div>
+
+        <div class="feature-item header-color-icon-large">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+            </svg>
+            <span>Спілкування</span>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
